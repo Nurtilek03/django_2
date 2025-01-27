@@ -290,13 +290,8 @@
                         <div class="col-xl-6 col-lg-6  col-md-12 col-sm-12 col-12">
                             <div class="about-content position-relative mb-50">
                                 <div class="position-relative">
-                                    <div class="title">
-                                        <span class="theme-color text-uppercase d-block mb-1 mt--5">{{ about.title }}</span>
-                                        <h2 class="mb-30">{{ about.title2 }}</h2>
-                                    </div><!-- /title -->
-                                </div>
-                                <p class="mb-25">{{ about.description }} </p>
-                                <div class="about-content position-relative mb-50">
+                                    <div class="title">      
+                                 <div class="about-content position-relative mb-50">
                                     <div class="position-relative">
                                         <div class="title">
                                             <span class="theme-color text-uppercase d-block mb-1 mt--5">{{ about.title }}</span>
@@ -343,9 +338,8 @@
                                         <img src="images/about/signature.png" alt="signature">
                                     </div>
                                     <div class="about-footer-content-right mt-20 text-left">
-                                        <h6 class="d-xl-inline-block text-uppercase pr5 mb-0">Bruce Wayne</h6>
-                                        <span class="openS-font-family meta-text-color">Software Architect, Google
-                                            Inc.</span>
+                                        <h6 class="d-xl-inline-block text-uppercase pr5 mb-0">{{ creator.key }}</h6>
+                                        <span class="openS-font-family meta-text-color">{{ creator.value }}</span>
                                     </div>
                                 </div><!-- /about-footer-content -->
                             </div><!-- /about-content -->
@@ -373,12 +367,12 @@
 
             <div class="marquee-w mb-125">
                 <div class="marquee">
-                    <span class="pl-4">Senior Website Developer from New York *</span>
-                    <span class="pl-4">Senior Website Developer from New York *</span>
+                    <span class="pl-4">Разработчик веб-сайтов из Geeks *</span>
+                    <span class="pl-4">Разработчик веб-сайтов из Geeks *</span>
                 </div>
                 <div class="marquee marquee2 pb-1">
-                    <span>I’m Open for new projects * Let’s Work Together.</span>
-                    <span>I’m Open for new projects * Let’s Work Together.</span>
+                    <span>Я открыт для новых проектов * Давайте работать вместе.</span>
+                    <span>Я открыт для новых проектов * Давайте работать вместе.</span>
                 </div>
             </div><!-- /marquee -->
 
@@ -387,8 +381,8 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12  col-md-12  col-sm-12 col-12">
                             <div class="title text-center">
-                                <span class="theme-color text-uppercase d-block mb-6">Portfolio</span>
-                                <h2>My Recent Works</h2>
+                                <span class="theme-color text-uppercase d-block mb-6">{{ end_work.key }}</span>
+                                <h2>{{ end_work.value }}</h2>
                             </div><!-- /title -->
                         </div><!-- /col -->
                     </div><!-- /row -->
@@ -398,16 +392,16 @@
                             <div class="row single-portfolio position-relative theme-border-top align-items-center">
                                 <div class="col-xl-2 col-lg-2 col-md-7  col-sm- col-">
                                     <div class="port-category">
-                                        <span class="meta-text-color text-uppercase">web design</span>
+                                        <span class="meta-text-color text-uppercase">{{ design.key}}</span>
                                     </div>
                                 </div><!-- /col -->
                                 <div class="col-xl-5 col-lg-5 col-md-6 col-sm- col- pl-lg-0">
-                                    <h3>Software Design for eThemeStudio</h3>
+                                    <h3>{{ design.value }}</h3>
                                 </div><!-- /col -->
                                 <div
                                     class="col-xl-5  col-lg-5 col-md-6  col-sm- col- d-flex justify-content-end align-items-center">
                                     <img class="port-img position-absolute left-0 ml-xl-3 transition5"
-                                        src="images/portfolio/port-img1.jpg" alt="portfolio image 1">
+                                        src="{{ design.image.urls }}" alt="portfolio image 1">
                                     <div class="port-content text-center transition5 z-index11" data-toggle="modal"
                                         data-target="#exampleModal-p1">
                                         <span class="d-inline-block"><i class="far fa-plus"></i>
@@ -421,16 +415,16 @@
                             <div class="row single-portfolio position-relative theme-border-top align-items-center">
                                 <div class="col-xl-2 col-lg-2 col-md-7 col-sm- col-">
                                     <div class="port-category">
-                                        <span class="meta-text-color text-uppercase">Development</span>
+                                        <span class="meta-text-color text-uppercase">{{ development.key }}</span>
                                     </div>
                                 </div><!-- /col -->
                                 <div class="col-xl-5 col-lg-5 col-md-6  col-sm- col- pl-lg-0">
-                                    <h3>Website Development for ABC Corporation</h3>
+                                    <h3>{{ development.value }}</h3>
                                 </div><!-- /col -->
                                 <div
                                     class="col-xl-5  col-lg-5 col-md-6  col-sm- col- d-flex justify-content-end align-items-center">
                                     <img class="port-img position-absolute left-0 ml-xl-3 transition5"
-                                        src="images/portfolio/port-img2.jpg" alt="portfolio image2">
+                                        src="{{ development.image.urls }}" alt="portfolio image2">
                                     <div class="port-content text-center transition5 z-index11" data-toggle="modal"
                                         data-target="#exampleModal-p2">
                                         <span class="d-inline-block"><i class="far fa-plus"></i>
@@ -444,16 +438,16 @@
                             <div class="row single-portfolio position-relative theme-border-top align-items-center">
                                 <div class="col-xl-2 col-lg-2 col-md-7 col-sm- col-">
                                     <div class="port-category">
-                                        <span class="meta-text-color text-uppercase">Branding</span>
+                                        <span class="meta-text-color text-uppercase">{{ branding.key }}</span>
                                     </div>
                                 </div><!-- /col -->
                                 <div class="col-xl-5 col-lg-5 col-md-6 col-sm- col- ml-lg-0">
-                                    <h3>Branding for Easy Computers</h3>
+                                    <h3>{{ branding.value }}</h3>
                                 </div><!-- /col -->
                                 <div
                                     class="col-xl-5 col-lg-5 col-md-6  col-sm- col- d-flex justify-content-end align-items-center">
                                     <img class="port-img position-absolute left-0 ml-xl-3 transition5"
-                                        src="images/portfolio/port-img3.jpg" alt="portfolio image 3">
+                                        src="{{ branding.image.urls }}" alt="portfolio image 3">
                                     <div class="port-content text-center transition5 z-index11" data-toggle="modal"
                                         data-target="#exampleModal-p3">
                                         <span class="d-inline-block"><i class="far fa-plus"></i>
@@ -468,16 +462,16 @@
                                 class="row single-portfolio position-relative theme-border-top theme-border-bottom align-items-center">
                                 <div class="col-xl-2 col-lg-2 col-md-7 col-sm- col-">
                                     <div class="port-category">
-                                        <span class="meta-text-color text-uppercase">Photography</span>
+                                        <span class="meta-text-color text-uppercase">{{  photography.key }}</span>
                                     </div>
                                 </div><!-- /col -->
                                 <div class="col-xl-5 col-lg-5 col-md-6  col-sm- col- pl-lg-0">
-                                    <h3>Security Analysis for eThemeStudio</h3>
+                                    <h3>{{  photography.value }}</h3>
                                 </div><!-- /col -->
                                 <div
                                     class="col-xl-5  col-lg-5 col-md-6 col-sm- col- d-flex justify-content-end align-items-center">
                                     <img class="port-img position-absolute left-0 ml-xl-3 transition5"
-                                        src="images/portfolio/port-img4.jpg" alt="portfolio image 4">
+                                        src="{{  photography.image.urls }}" alt="portfolio image 4">
                                     <div class="port-content text-center transition5 z-index11" data-toggle="modal"
                                         data-target="#exampleModal-p4">
                                         <span class="d-inline-block"><i class="far fa-plus"></i>
@@ -504,33 +498,21 @@
                                 <div class="modal-content border-0">
                                     <div class="modal-body pl-50 pr-50 pt-10 pb-20">
                                         <div class="blog-modal-img">
-                                            <img class="w-100" src="images/portfolio/port-img1-large.jpg"
+                                            <img class="w-100" src="{{ custom_CMS.image.urls  }}"
                                                 alt="product image 02">
                                         </div>
                                         <div class="row">
                                             <div class="col-xl-7 col-lg-7  col-md-12 col-sm-12 col-12">
                                                 <div class="content-wrapper">
-                                                    <h2 class="modal-title">eThemeStudio Custom CMS</h2>
+                                                    <h2 class="modal-title">{{  custom_CMS.key }}</h2>
                                                     <p>
-                                                        Duis aute irure dolor in reprehenderit in voluptate velit
-                                                        esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum
-                                                        dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                                                        ad minim veniam, quis nostrud exercitation ullamco laboris
-                                                        nisi ut aliquip ex ea commodo consequat. Excepteur sint
-                                                        occaecat cupidatat non proident, sunt in culpa qui officia
-                                                        deserunt mollit anim id est laborum.
+                                                     {{  custom_CMS.value }}
                                                     </p>
                                                     <p>
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                        Dignissimos laudantium fuga molestiae, aut eius minus
-                                                        reprehenderit.
+                                                     {{  custom_CMS.value2 }}
                                                     </p>
                                                     <p class="mb-0">
-                                                        Duis aute irure dolor in reprehenderit in voluptate velit
-                                                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                                                        occaecat cupidatat non proident, sunt in culpa qui officia
-                                                        deserunt mollit anim id est laborum.
+                                                     {{ custom_CMS.value3 }}
                                                     </p>
                                                 </div>
                                             </div><!-- /col -->
@@ -538,15 +520,15 @@
                                                 <div
                                                     class="meta-wrapper form-bg mt-60 pt-40 pb-45 pr-20 pl-45 mt-40 mb-10">
                                                     <ul class="item-meta">
-                                                        <li>Project Type : <span class="pl-2 openS-font-family">Graphic
-                                                                Design</span></li>
-                                                        <li>Clien : <span class="pl-2 openS-font-family">Juwel
-                                                                Khan</span></li>
-                                                        <li>Duration :<span class="pl-2 openS-font-family">2
-                                                                Weeks</span></li>
-                                                        <li>Task : <span class="pl-2 openS-font-family">UI/UX,
+                                                        <li>Тип проекта : <span class="pl-2 openS-font-family">Графический 
+                                                            дизайн</span></li>
+                                                        <li>Клиент:  <span class="pl-2 openS-font-family">Буксултан 
+                                                                Жусупов</span></li>
+                                                        <li>Продолжительность :<span class="pl-2 openS-font-family">2
+                                                             недели</span></li>
+                                                        <li>Задача : <span class="pl-2 openS-font-family">UI/UX,
                                                                 Frontend</span></li>
-                                                        <li>Budget : <span class="pl-2 openS-font-family">$2000</span>
+                                                        <li>Бюджет : <span class="pl-2 openS-font-family">$2000</span>
                                                         </li>
                                                     </ul>
                                                     <a href="#"
@@ -559,7 +541,7 @@
                                             <div class="row align-items-center justify-content-md-between">
                                                 <div class="col-xl-7 col-lg-7  col-md-12 col-sm-12 col-12">
                                                     <div class="modal-tags d-sm-flex align-items-center pt-25">
-                                                        <h6 class="mb-0 pr-15 black-color">Tags :</h6>
+                                                        <h6 class="mb-0 pr-15 black-color">Теги :</h6>
                                                         <ul class="tag-list">
                                                             <li class="d-inline-block pr-10">
                                                                 <a class="d-block" href="#">Web
@@ -578,7 +560,8 @@
                                                 <div class="col-xl-5 col-lg-5  col-md-12 col-sm-10 col-12">
                                                     <div
                                                         class="pro-modal-social-link d-flex align-items-center justify-content-lg-end pt-25">
-                                                        <h6 class="pr-12 mb-0 primary-color">Share this product :</h6>
+                                                        <h6 class="pr-12 mb-0 primary-color">
+                                                            Поделиться этим продуктом :</h6>
                                                         <ul class="social-link text-md-right">
                                                             <li class="d-inline-block">
                                                                 <a class="facebook-color text-center pl-15 d-inline-block transition-3"
@@ -622,33 +605,21 @@
                                 <div class="modal-content border-0">
                                     <div class="modal-body pl-50 pr-50 pt-10 pb-20">
                                         <div class="blog-modal-img">
-                                            <img class="w-100" src="images/portfolio/port-img2-large.jpg"
+                                            <img class="w-100" src="{{ custom_CMS2.image.urls }}"
                                                 alt="product image 02">
                                         </div>
                                         <div class="row">
                                             <div class="col-xl-7 col-lg-7  col-md-12 col-sm-12 col-12">
                                                 <div class="content-wrapper">
-                                                    <h2 class="modal-title">eThemeStudio Custom CMS</h2>
+                                                    <h2 class="modal-title">{{   custom_CMS2.key }}</h2>
                                                     <p>
-                                                        Duis aute irure dolor in reprehenderit in voluptate velit
-                                                        esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum
-                                                        dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                                                        ad minim veniam, quis nostrud exercitation ullamco laboris
-                                                        nisi ut aliquip ex ea commodo consequat. Excepteur sint
-                                                        occaecat cupidatat non proident, sunt in culpa qui officia
-                                                        deserunt mollit anim id est laborum.
+                                                       {{   custom_CMS2.value }}
                                                     </p>
                                                     <p>
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                        Dignissimos laudantium fuga molestiae, aut eius minus
-                                                        reprehenderit.
+                                                       {{   custom_CMS2.value2 }}
                                                     </p>
                                                     <p class="mb-0">
-                                                        Duis aute irure dolor in reprehenderit in voluptate velit
-                                                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                                                        occaecat cupidatat non proident, sunt in culpa qui officia
-                                                        deserunt mollit anim id est laborum.
+                                                       {{   custom_CMS2.value3 }}
                                                     </p>
                                                 </div>
                                             </div><!-- /col -->
@@ -656,15 +627,15 @@
                                                 <div
                                                     class="meta-wrapper form-bg mt-60 pt-40 pb-45 pr-20 pl-45 mt-40 mb-10">
                                                     <ul class="item-meta">
-                                                        <li>Project Type : <span class="pl-2 openS-font-family">Graphic
-                                                                Design</span></li>
-                                                        <li>Clien : <span class="pl-2 openS-font-family">Juwel
-                                                                Khan</span></li>
-                                                        <li>Duration :<span class="pl-2 openS-font-family">2
-                                                                Weeks</span></li>
-                                                        <li>Task : <span class="pl-2 openS-font-family">UI/UX,
+                                                        <li>Тип проекта : <span class="pl-2 openS-font-family">Графический 
+                                                           дизайн</span></li>
+                                                        <li>Клиент : <span class="pl-2 openS-font-family">Бексултан
+                                                                Жусупов</span></li>
+                                                        <li>Продолжительность :<span class="pl-2 openS-font-family">2
+                                                            недели</span></li>
+                                                        <li>Задача : <span class="pl-2 openS-font-family">UI/UX,
                                                                 Frontend</span></li>
-                                                        <li>Budget : <span class="pl-2 openS-font-family">$2000</span>
+                                                        <li>Бюджет : <span class="pl-2 openS-font-family">$2000</span>
                                                         </li>
                                                     </ul>
                                                     <a href="#"
@@ -677,7 +648,7 @@
                                             <div class="row align-items-center justify-content-md-between">
                                                 <div class="col-xl-7 col-lg-7  col-md-12 col-sm-12 col-12">
                                                     <div class="modal-tags d-sm-flex align-items-center pt-25">
-                                                        <h6 class="mb-0 pr-15 black-color">Tags :</h6>
+                                                        <h6 class="mb-0 pr-15 black-color">Теги :</h6>
                                                         <ul class="tag-list">
                                                             <li class="d-inline-block pr-10">
                                                                 <a class="d-block" href="#">Web
@@ -696,7 +667,8 @@
                                                 <div class="col-xl-5 col-lg-5  col-md-12 col-sm-10 col-12">
                                                     <div
                                                         class="pro-modal-social-link d-flex align-items-center justify-content-lg-end pt-25">
-                                                        <h6 class="pr-12 mb-0">Share this product :</h6>
+                                                        <h6 class="pr-12 mb-0">
+                                                            Поделиться этим продуктом :</h6>
                                                         <ul class="social-link text-md-right">
                                                             <li class="d-inline-block">
                                                                 <a class="facebook-color text-center pl-15 d-inline-block transition-3"
@@ -740,33 +712,21 @@
                                 <div class="modal-content border-0">
                                     <div class="modal-body pl-50 pr-50 pt-10 pb-20">
                                         <div class="blog-modal-img">
-                                            <img class="w-100" src="images/portfolio/port-img3-large.jpg"
+                                            <img class="w-100" src="{{  custom_CMS3.image.urls  }}"
                                                 alt="product image 02">
                                         </div>
                                         <div class="row">
                                             <div class="col-xl-7 col-lg-7  col-md-12 col-sm-12 col-12">
                                                 <div class="content-wrapper">
-                                                    <h2 class="modal-title">eThemeStudio Custom CMS</h2>
+                                                    <h2 class="modal-title">{{  custom_CMS3.key }}</h2>
                                                     <p>
-                                                        Duis aute irure dolor in reprehenderit in voluptate velit
-                                                        esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum
-                                                        dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                                                        ad minim veniam, quis nostrud exercitation ullamco laboris
-                                                        nisi ut aliquip ex ea commodo consequat. Excepteur sint
-                                                        occaecat cupidatat non proident, sunt in culpa qui officia
-                                                        deserunt mollit anim id est laborum.
+                                                        {{  custom_CMS3.value }}
                                                     </p>
                                                     <p>
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                        Dignissimos laudantium fuga molestiae, aut eius minus
-                                                        reprehenderit.
+                                                        {{  custom_CMS3.value2 }}
                                                     </p>
                                                     <p class="mb-0">
-                                                        Duis aute irure dolor in reprehenderit in voluptate velit
-                                                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                                                        occaecat cupidatat non proident, sunt in culpa qui officia
-                                                        deserunt mollit anim id est laborum.
+                                                        {{  custom_CMS3.value3 }}
                                                     </p>
                                                 </div>
                                             </div><!-- /col -->
@@ -774,15 +734,15 @@
                                                 <div
                                                     class="meta-wrapper form-bg mt-60 pt-40 pb-45 pr-20 pl-45 mt-40 mb-10">
                                                     <ul class="item-meta">
-                                                        <li>Project Type : <span class="pl-2 openS-font-family">Graphic
-                                                                Design</span></li>
-                                                        <li>Clien : <span class="pl-2 openS-font-family">Juwel
-                                                                Khan</span></li>
-                                                        <li>Duration :<span class="pl-2 openS-font-family">2
-                                                                Weeks</span></li>
-                                                        <li>Task : <span class="pl-2 openS-font-family">UI/UX,
+                                                        <li>Тип проекта : <span class="pl-2 openS-font-family">Графический 
+                                                             дизайн</span></li>
+                                                        <li>Клиент: <span class="pl-2 openS-font-family">Бексултан
+                                                                Жусупов</span></li>
+                                                        <li>Продолжительность :<span class="pl-2 openS-font-family">2
+                                                            недели</span></li>
+                                                        <li>Задача : <span class="pl-2 openS-font-family">UI/UX,
                                                                 Frontend</span></li>
-                                                        <li>Budget : <span class="pl-2 openS-font-family">$2000</span>
+                                                        <li>Бюджет : <span class="pl-2 openS-font-family">$2000</span>
                                                         </li>
                                                     </ul>
                                                     <a href="#"
@@ -795,7 +755,7 @@
                                             <div class="row align-items-center justify-content-md-between">
                                                 <div class="col-xl-7 col-lg-7  col-md-12 col-sm-12 col-12">
                                                     <div class="modal-tags d-sm-flex align-items-center pt-25">
-                                                        <h6 class="mb-0 pr-15 black-color">Tags :</h6>
+                                                        <h6 class="mb-0 pr-15 black-color">Теги :</h6>
                                                         <ul class="tag-list">
                                                             <li class="d-inline-block pr-10">
                                                                 <a class="d-block" href="#">Web
@@ -814,7 +774,8 @@
                                                 <div class="col-xl-5 col-lg-5  col-md-12 col-sm-10 col-12">
                                                     <div
                                                         class="pro-modal-social-link d-flex align-items-center justify-content-lg-end pt-25">
-                                                        <h6 class="pr-12 mb-0">Share this product :</h6>
+                                                        <h6 class="pr-12 mb-0">
+                                                            Поделиться этим продуктом :</h6>
                                                         <ul class="social-link text-md-right">
                                                             <li class="d-inline-block">
                                                                 <a class="facebook-color text-center pl-15 d-inline-block transition-3"
@@ -858,33 +819,21 @@
                                 <div class="modal-content border-0">
                                     <div class="modal-body pl-50 pr-50 pt-10 pb-20">
                                         <div class="blog-modal-img">
-                                            <img class="w-100" src="images/portfolio/port-img4-large.jpg"
+                                            <img class="w-100" src="{{  custom_CMS4.image.urls }}"
                                                 alt="product image 02">
                                         </div>
                                         <div class="row">
                                             <div class="col-xl-7 col-lg-7  col-md-12 col-sm-12 col-12">
                                                 <div class="content-wrapper">
-                                                    <h2 class="modal-title">eThemeStudio Custom CMS</h2>
+                                                    <h2 class="modal-title">{{  custom_CMS4.key }}</h2>
                                                     <p>
-                                                        Duis aute irure dolor in reprehenderit in voluptate velit
-                                                        esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum
-                                                        dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                                                        ad minim veniam, quis nostrud exercitation ullamco laboris
-                                                        nisi ut aliquip ex ea commodo consequat. Excepteur sint
-                                                        occaecat cupidatat non proident, sunt in culpa qui officia
-                                                        deserunt mollit anim id est laborum.
+                                                        {{ custom_CMS4.value }}
                                                     </p>
                                                     <p>
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                        Dignissimos laudantium fuga molestiae, aut eius minus
-                                                        reprehenderit.
+                                                        {{  custom_CMS4.value2 }}
                                                     </p>
                                                     <p class="mb-0">
-                                                        Duis aute irure dolor in reprehenderit in voluptate velit
-                                                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                                                        occaecat cupidatat non proident, sunt in culpa qui officia
-                                                        deserunt mollit anim id est laborum.
+                                                        {{  custom_CMS4.value3 }}
                                                     </p>
                                                 </div>
                                             </div><!-- /col -->
@@ -892,15 +841,15 @@
                                                 <div
                                                     class="meta-wrapper form-bg mt-60 pt-40 pb-45 pr-20 pl-45 mt-40 mb-10">
                                                     <ul class="item-meta">
-                                                        <li>Project Type : <span class="pl-2 openS-font-family">Graphic
-                                                                Design</span></li>
-                                                        <li>Clien : <span class="pl-2 openS-font-family">Juwel
-                                                                Khan</span></li>
-                                                        <li>Duration :<span class="pl-2 openS-font-family">2
-                                                                Weeks</span></li>
-                                                        <li>Task : <span class="pl-2 openS-font-family">UI/UX,
+                                                        <li>Тип проекта : <span class="pl-2 openS-font-family">Графический
+                                                            дизайн</span></li>
+                                                        <li>Клиент : <span class="pl-2 openS-font-family">Бексултан
+                                                                Жусупов</span></li>
+                                                        <li>Продолжительность :<span class="pl-2 openS-font-family">2
+                                                            недели</span></li>
+                                                        <li>Задача :<span class="pl-2 openS-font-family">UI/UX,
                                                                 Frontend</span></li>
-                                                        <li>Budget : <span class="pl-2 openS-font-family">$2000</span>
+                                                        <li>Бюджет : <span class="pl-2 openS-font-family">$2000</span>
                                                         </li>
                                                     </ul>
                                                     <a href="#"
@@ -913,7 +862,7 @@
                                             <div class="row align-items-center justify-content-md-between">
                                                 <div class="col-xl-7 col-lg-7  col-md-12 col-sm-12 col-12">
                                                     <div class="modal-tags d-sm-flex align-items-center pt-25">
-                                                        <h6 class="mb-0 pr-15 black-color">Tags :</h6>
+                                                        <h6 class="mb-0 pr-15 black-color">Теги :</h6>
                                                         <ul class="tag-list">
                                                             <li class="d-inline-block pr-10">
                                                                 <a class="d-block" href="#">Web
@@ -932,8 +881,9 @@
                                                 <div class="col-xl-5 col-lg-5  col-md-12 col-sm-10 col-12">
                                                     <div
                                                         class="pro-modal-social-link d-flex align-items-center justify-content-lg-end pt-25">
-                                                        <h6 class="pr-15 mb-0">Share
-                                                            this product
+                                                        <h6 class="pr-15 mb-0">
+                                                            Поделиться этим 
+                                                            продуктом
                                                             :</h6>
                                                         <ul class="social-link text-md-right">
                                                             <li class="d-inline-block">
@@ -981,12 +931,11 @@
                         <div class="fun-fact-content mb-50 mr-lg-2 mr-xl-0">
                             <div class="position-relative">
                                 <div class="title">
-                                    <span class="theme-color text-uppercase d-block mb-1 mt--5">Fun Facts</span>
-                                    <h2 class="mb-30 text-white">I Develop System that Works</h2>
+                                    <span class="theme-color text-uppercase d-block mb-1 mt--5">{{ fun_facts.title }}</span>
+                                    <h2 class="mb-30 text-white">{{ fun_facts.title2 }}</h2>
                                 </div><!-- /title -->
                             </div>
-                            <p>Sed ut perspiciatis unde omnis iste natus kobita tumi sopno charini hoye
-                                khbor nio na sit volup sundori toma amar tumi nili mar tatem accusantium dolore.</p>
+                            <p>{{ fun_facts.description }}</p>
                         </div><!-- fun-fact-content -->
                     </div><!-- /col -->
 
@@ -997,7 +946,7 @@
                                     <div class="mr-25 d-flex align-content-start justify-content-center">
                                         <span class="theme-color d-inline-block counter">12</span>
                                     </div>
-                                    <h3 class="text-white mb-0">Years of <br> Experience</h3>
+                                    <h3 class="text-white mb-0"> Годы <br> Опыт </h3>
                                 </div><!-- /single-fact -->
                             </div><!-- /col -->
 
@@ -1005,9 +954,9 @@
                                 <div class="single-fact d-block d-flex align-items-center border-radius10 mb-30">
                                     <div class="mr-25 d-flex align-content-start justify-content-center">
                                         <span class="theme-color d-inline-block counter">2</span>
-                                        <span class="per d-inline-block theme-color">K</span>
+                                        <span class="per d-inline-block theme-color">К</span>
                                     </div>
-                                    <h3 class="text-white mb-0">Total <br> Clients</h3>
+                                    <h3 class="text-white mb-0"> Общий <br> Клиенты </h3>
                                 </div><!-- /single-fact -->
                             </div><!-- /col -->
 
@@ -1017,7 +966,7 @@
                                         <span class="theme-color d-inline-block counter">4</span>
                                         <span class="per d-inline-block theme-color">K</span>
                                     </div>
-                                    <h3 class="text-white mb-0">Projects <br> Completed</h3>
+                                    <h3 class="text-white mb-0"> Проекты <br> Завершенный </h3>
                                 </div><!-- /single-fact -->
                             </div><!-- /col -->
 
@@ -1026,7 +975,7 @@
                                     <div class="mr-25 d-flex align-content-start justify-content-center">
                                         <span class="theme-color d-inline-block counter">30</span>
                                     </div>
-                                    <h3 class="text-white mb-0">Digital <br> Products</h3>
+                                    <h3 class="text-white mb-0"> Цифровой <br> Продукты </h3>
                                 </div><!-- /single-fact -->
                             </div><!-- /col -->
 
@@ -1054,8 +1003,8 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12  col-md-12  col-sm-12 col-12">
                         <div class="title text-center">
-                            <span class="theme-color text-uppercase d-block mb-6">Success Stories</span>
-                            <h2>Awards & Achivements</h2>
+                            <span class="theme-color text-uppercase d-block mb-6">Истории успеха</span>
+                            <h2>Награды и достижения</h2>
                         </div><!-- /title -->
                     </div><!-- /col -->
                 </div><!-- /row -->
