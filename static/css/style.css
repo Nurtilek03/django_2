@@ -1,0 +1,99 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(236, 234, 234);
+    margin: 10;
+    padding: 10;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1, h2 {
+    color: rgb(28, 21, 34);
+    font-size: 32px;
+   
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+    border-bottom: 1px solid ;
+    padding-bottom: 20px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: red;
+}
+
+a{
+    color: rgb(63, 40, 84);
+    text-decoration: none;
+    color: rgb(82, 58, 104); 
+    font-size: 16px;
+}
+
+a:hover{
+    text-decoration: underline;
+    
+}
+
+img{
+    border-radius: 5px;
+    height: auto;
+    width: 700px; 
+}
+.img21:hover{
+    scale: 1.2;
+}
+.img23:hover{
+    scale: 1.2;
+}
+
+
+
+.img21{
+    width: 200px;
+}
+.car-item{
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+    background: rgba(149, 179, 81, 0.677);
+}
+.text{
+    margin-left: 20px;
+    h3{
+        font-size: 40px;
+    }
+   a{
+
+    color: #060202;
+    font-size: 20px;
+
+   } 
+a:hover{
+    color: rgb(243, 235, 235);
+    scale: 1.2;
+}
+}

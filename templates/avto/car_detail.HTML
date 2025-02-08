@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подробнее о машине</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="car-detail">
+        <h1>{{ car.brand }} {{ car.model }}</h1>
+        <img class='img23' src="{{ car.main_image.url }}" alt="{{ car.brand }} {{ car.model }}">
+        <p><strong>Год выпуска:</strong> {{ car.year }}</p>
+        <p><strong>Цена:</strong> {{ car.price }} руб.</p>
+        <p><strong>Описание:</strong> {{ car.description }}</p>
+        <a href="{% url 'car_list' %}">Назад</a>
+    </div>
+</body>
+</html>
